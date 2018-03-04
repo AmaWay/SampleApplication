@@ -12,7 +12,23 @@
 		FDE83EC9204C44120033AAAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDE83EC7204C44120033AAAC /* Main.storyboard */; };
 		FDE83ECB204C44120033AAAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDE83ECA204C44120033AAAC /* Assets.xcassets */; };
 		FDE83ECE204C44120033AAAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDE83ECC204C44120033AAAC /* LaunchScreen.storyboard */; };
+		FDE83EE0204C45380033AAAC /* CameraFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE83EDE204C45220033AAAC /* CameraFramework.framework */; };
+		FDE83EE1204C45380033AAAC /* CameraFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDE83EDE204C45220033AAAC /* CameraFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FDE83EE2204C45390033AAAC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FDE83EE1204C45380033AAAC /* CameraFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FDE83EC0204C44120033AAAC /* SampleApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +38,7 @@
 		FDE83ECA204C44120033AAAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDE83ECD204C44120033AAAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FDE83ECF204C44120033AAAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDE83EDE204C45220033AAAC /* CameraFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CameraFramework.framework; path = "../../../../Library/Developer/Xcode/DerivedData/CameraWorkspace-dffhewsehvfltkbztjwgmpzgitkj/Build/Products/Debug-iphoneos/CameraFramework.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDE83EE0204C45380033AAAC /* CameraFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +56,7 @@
 		FDE83EB7204C44120033AAAC = {
 			isa = PBXGroup;
 			children = (
+				FDE83EDD204C44F70033AAAC /* Frameworks */,
 				FDE83EC2204C44120033AAAC /* SampleApplication */,
 				FDE83EC1204C44120033AAAC /* Products */,
 			);
@@ -64,6 +83,14 @@
 			path = SampleApplication;
 			sourceTree = "<group>";
 		};
+		FDE83EDD204C44F70033AAAC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FDE83EDE204C45220033AAAC /* CameraFramework.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +101,7 @@
 				FDE83EBC204C44120033AAAC /* Sources */,
 				FDE83EBD204C44120033AAAC /* Frameworks */,
 				FDE83EBE204C44120033AAAC /* Resources */,
+				FDE83EE2204C45390033AAAC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -91,7 +119,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0910;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = AmaWay;
 				TargetAttributes = {
 					FDE83EBF204C44120033AAAC = {
@@ -211,7 +239,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -262,7 +290,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -277,6 +305,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YFU9N8R44W;
 				INFOPLIST_FILE = SampleApplication/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = uk.AmaWay.App.SampleApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -292,6 +321,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YFU9N8R44W;
 				INFOPLIST_FILE = SampleApplication/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = uk.AmaWay.App.SampleApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
